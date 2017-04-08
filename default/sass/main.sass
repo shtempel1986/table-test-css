@@ -26,7 +26,7 @@ $test-green: #417305
     span
       text-decoration: none
       border-bottom: #e1f1ff solid 1px
-  &__reit
+  &__rating
     width: 100px
   &__quality
     width: 80px
@@ -92,44 +92,28 @@ $test-green: #417305
   &::before
     top: 2px
     border-top: none
+//Описание стилей для Искрографика
 .sparkline
-  width: 48px
+  width: 64px
   height: 17px
-  position: relative
-  div
-    position: absolute
+  vertical-align: bottom
+  font-size: 0
+  .sparkline__tick
+    display: inline-block
     bottom: 0
     left: 0
     height: 15px
     width: 4px
     background: #d2d6d9
+    transition-duration: 0.3s
     &.sparkline__tick_alert
       background: #cca099
-  .sparkline__tick2
-    left: 4px
-  .sparkline__tick3
-    left: 8px
-  .sparkline__tick4
-    left: 12px
-  .sparkline__tick5
-    left: 16px
-  .sparkline__tick6
-    left: 20px
-  .sparkline__tick7
-    left: 24px
-  .sparkline__tick8
-    left: 28px
-  .sparkline__tick9
-    left: 32px
-  .sparkline__tick10
-    left: 36px
-  .sparkline__tick11
-    left: 40px
-  .sparkline__tick12
-    left: 44px
-    background: #303233
+  .sparkline__tick_active
+    background: black
     &.sparkline__tick_alert
       background: $test-red
+
+//Стили для различных разрешения экрана
 @media all and (min-width: 790px) and (max-width: 1324px)
   .test-wrapper
     width: 790px
@@ -149,3 +133,6 @@ $test-green: #417305
   .test-table__place, .test-table-head__place, .test-table .test-table__average
     width: 60px
     padding: 0 0 0 5px
+
+
+
